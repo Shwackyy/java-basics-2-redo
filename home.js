@@ -22,7 +22,10 @@
 */
 
 //CODE HERE
-
+let greetUser = (username) => {
+    return console.log(`Welcome Back, ${username}`)
+}
+greetUser("Brett")
 
 // const greetUser = username => 
 //////////////////PROBLEM 2////////////////////
@@ -49,22 +52,22 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 const canWeDeliver = (zipcode) => {
-  let inZone = false
-
-deliveryAreaZipCodes.forEach((ele) => {
-    if(zipcode === ele){
-        inZone = true
-    }
-})
-
-if(inZone){
-    return `You're in our delivery zone!`
-} else{
-    return `Sorry, we can't deliver to that address`
-}
-}
-
-console.log(canWeDeliver(85205))
+    let inZone = false
+  
+  deliveryAreaZipCodes.forEach((ele) => {
+      if(zipcode === ele){
+          inZone = true
+      }
+  })
+  
+  if(inZone){
+      return `You're in our delivery zone!`
+  } else{
+      return `Sorry, we can't deliver to that address`
+  }
+  }
+  
+  console.log(canWeDeliver(85205))
 
 
 /* 
@@ -85,7 +88,17 @@ Name your new function `canWeDeliverTwo`.
 */
 
 // CODE HERE
-
+function canWeDeliverTwo(zipCode){
+    if(deliveryAreaZipCodes.includes(zipCode)){
+        console.log(`We definitely can deliver to ${zipCode}!`)
+    } else {
+        console.log(`Sorry! It seems that ${zipCode} is out of our range!`)
+    }
+}
+canWeDeliver(12345)
+canWeDeliver(85205)
+canWeDeliverTwo(12345)
+canWeDeliverTwo(85205)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -121,11 +134,10 @@ to replace the 15 with a 10.
 */
 
 //CODE HERE
+
+
 deals[0].desc = deals[0].desc.replace(15, 10)
 console.log(deals[0].title)
-
-
-
 
 
 

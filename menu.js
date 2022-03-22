@@ -31,18 +31,17 @@
 */
 
 //CODE HERE
-
-const pizza = {
-    name: "cheese", 
-    price: 8.45,
-    category: "entree",
-    popularity: "High Rating",
-    rating: "4 stars",
-    tags: 'gluten-free' && 'vegan'
+let pizza = {
+    name: "Pepperoni Pizza",
+    price: 12.00,
+    category: "Entree",
+    popularity: 2,
+    rating: 9,
+    tags: ["Popular", "Best-Selling", "Pepperoni", "Kids"]
 }
 
-//
-//won't let me add more tags!
+
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -65,7 +64,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-console.log(pizza.tags)
+console.log(pizza.tags[1])
 
 
 /*
@@ -87,9 +86,9 @@ console.log(price)
 */
 
 //CODE HERE
-
 const {category} = pizza
 console.log(category)
+
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -103,18 +102,46 @@ console.log(category)
 */
 
 //CODE HERE
-class_name = [
-    {name: "Teriyaki Burger", price: 5.67, category: "entree", popularity: "high rating", rating: "5 stars", tags: "Juicy" && "Thick"},
-    {name: "Steak Fries", price: 3.53, category: "Side", popularity: "high rating", rating: "5 stars",  tags: "Tasty" && "Seasoned"},
-    {name: "Fanta", price: 2.25, category: "Side", popularity: "high rating", rating: "5 stars", tags: "Sweet" && "Tangy"},
-    {name: "FrySauce", price: "free", category: "Sauce", popularity: "high rating", rating: "5 stars", tags: "Vegan" && "Tangy"},
-    {name: "Hotdog", price: 4.67, category: "entree", popularity: "high rating",rating: "5 stars", tags: "Juicy" && "Tasty"}
+
+const foodArr = [
+    pizza = {
+        name: "Pepperoni Pizza",
+        price: 12.00,
+        category: "Entree",
+        popularity: 2,
+        rating: 9,
+        tags: ["Popular", "Best-Selling", "Pepperoni", "Kids"]
+    },
+    spaghetti = {
+        name: "Spaghetti",
+        price: 15.00,
+        category: "Entree",
+        popularity: 5,
+        rating: 8,
+        tags: ["Popular", "Best-Selling", "Gluten", "Entree"]
+    },
+    iceCream = {
+        name: "Ice Cream",
+        price: 10.00,
+        category: "Dessert",
+        popularity: 6,
+        rating: 7,
+        tags: ["Popular", "Dessert", "Dairy", "Kids"]
+    },
+    breadsticks = {
+        name: "Breadsticks",
+        price: 3.00,
+        category: "Appetizer",
+        popularity: 7,
+        rating: 7,
+        tags: ["Popular", "Gluten", "Evil", "Kids"]
+    }
+]
     
     
     
     
-    
-]  
+ 
 
 // const hotDog = {
 //     name: "Hotdog", 
@@ -177,7 +204,10 @@ class_name = [
 */
 
 //CODE HERE
-
+const filteredFood = foodArr.filter(function(food){
+    return food.tags.includes("Evil")
+});
+console.log(filteredFood)
 // const sameTags = class_name.filter(function(class_name) {
 // if(class_name === "Tasty") {
 // return true
@@ -187,8 +217,7 @@ class_name = [
 
 // console.log(sameTags)
 
-const sameTags = class_name.filter(class_name => class_name.tags === 'Tangy')
-console.log(sameTags)
+
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
@@ -237,10 +266,12 @@ console.log(sameTags)
 const filterByProperty = (property, number, type) => {
     const filtered = foodArr.filer((element) => {
         if(type === 'above'){
-            if(element[property > number]{
+            if(element[property > number] {
             
             }
-            
+        }
+        }
+    }
            
         
 
@@ -253,3 +284,4 @@ const filterByProperty = (property, number, type) => {
 // */
 
 //CODE HERE
+filterByProperty('price', 10, "above")

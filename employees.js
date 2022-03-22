@@ -20,25 +20,23 @@
 */
 
 //CODE HERE
-
-
-
-
-
-
-
 class Employee {
-    constructor(name, Shift)  {
-        return(name + Shift)
+    constructor(name, shifts){
+        this.name = name;
+        this.shifts = shifts
     }
-    getSchedule = [
-        {name: "Nezuko", Shift: "Weekdays"},             //COMEBACK TO THIS ONE 
-        {name: "Inoske", Shift: "Weekdays"},
-        {name: "Tanjiro", Shift: "Weekends"},
-        {name: "Zenitsu", Shift: "Weekends"}
-    ]
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
 }
 console.log(Employee)
+
+
+
+
+
+
+
 /*
 Create a new instance of your class.
 Save it to a variable called `empOne`.
@@ -50,14 +48,14 @@ shifts: weekday mornings, weekday afternoons
 */
 
 //CODE HERE
-
+let empOne = new Employee("Brett", "Tuesday")
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -74,7 +72,9 @@ shifts: weekday mornings, weekday afternoons
 //CODE HERE
 
 
-
+let empTwo = {...empOne}
+empTwo.name = "Jack"
+console.log(empTwo)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a class called Manager that *extends* 
@@ -99,7 +99,18 @@ shifts: weekday mornings, weekday afternoons
 */
 
 //CODE HERE
-
+class Manager extends Employee {
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(emp){
+        this.employees.push(emp)
+    }
+}
 
 
 /*
@@ -115,14 +126,14 @@ shifts: weekday mornings, weekday afternoons
 
 //CODE HERE
 
-
+let manager = new Manager("Jeffery", "Wednesday, Friday", ["Jeffery, Rennly, Cobb"])
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -130,7 +141,7 @@ shifts: weekday mornings, weekday afternoons
 */
 
 //CODE HERE 
-
+manager.addEmployee("Jake")
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -138,3 +149,4 @@ shifts: weekday mornings, weekday afternoons
 */
 
 //CODE HERE
+manager.getEmployees()
