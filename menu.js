@@ -143,50 +143,6 @@ const foodArr = [
     
  
 
-// const hotDog = {
-//     name: "Hotdog", 
-//     price: 4.67,
-//     category: "entree",
-//     popularity: "high rating",
-//     rating: "5 stars",
-//     tags: "Juicy" && "Tasty"
-// }
-    
-
-// const sauce = {
-//     name: "FrySauce", 
-//     price: "free",
-//     category: "Sauce",
-//     popularity: "high rating",
-//     rating: "5 stars",
-//     tags: "Vegan" && "Tangy"
-// }
-// const burger = {
-//     name: "Teriyaki Burger", 
-//     price: 5.67,
-//     category: "entree",
-//     popularity: "high rating",
-//     rating: "5 stars",
-//     tags: "Juicy" && "Thick"
-// }
-
-// const Fries = {
-//     name: "Steak Fries", 
-//     price: 3.53,
-//     category: "Side",
-//     popularity: "high rating",
-//     rating: "5 stars",
-//     tags: "Tasty" && "Seasoned"
-// }
-
-// const Drink = {
-//     name: "Fanta", 
-//     price: 2.25,
-//     category: "Side",
-//     popularity: "high rating",
-//     rating: "5 stars",
-//     tags: "Sweet" && "Tangy"
-// }
 
  
 
